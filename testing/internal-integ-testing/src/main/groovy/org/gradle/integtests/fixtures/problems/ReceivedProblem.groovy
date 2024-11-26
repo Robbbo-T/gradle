@@ -79,6 +79,14 @@ class ReceivedProblem implements Problem {
         operationId
     }
 
+    <T> T firstLocation(Class<T> type) {
+        def locations = getOriginLocations()
+        def location = locations.find { type.isInstance(it) } as T
+        assert location != null
+        assert type.isInstance(location)
+        location
+    }
+
     <T> T oneLocation(Class<T> type) {
         def locations = getOriginLocations()
         assert locations.size() == 1

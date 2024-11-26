@@ -27,7 +27,7 @@ public class ProblemTaskPathTracker {
     }
 
     @Nullable
-    static String getTaskPath() {
+    public static String getTaskPath() {
         return TASK_NAME.get();
     }
 
