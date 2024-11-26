@@ -42,7 +42,7 @@ import org.gradle.api.internal.tasks.TaskDependencyFactory
 import org.gradle.api.internal.tasks.properties.annotations.OutputPropertyRoleAnnotationHandler
 import org.gradle.api.model.ObjectFactory
 import org.gradle.api.problems.ProblemReporter
-import org.gradle.api.problems.internal.AdditionalDataBuilderFactory
+import org.gradle.api.problems.internal.DefaultAdditionalDataBuilderFactory
 import org.gradle.api.problems.internal.DefaultProblems
 import org.gradle.api.problems.internal.ExceptionProblemRegistry
 import org.gradle.api.problems.internal.InternalProblemReporter
@@ -393,7 +393,7 @@ class TestProblems implements InternalProblems {
     }
 
     @Override
-    AdditionalDataBuilderFactory getAdditionalDataBuilderFactory() {
+    DefaultAdditionalDataBuilderFactory getAdditionalDataBuilderFactory() {
         delegate.additionalDataBuilderFactory
     }
 

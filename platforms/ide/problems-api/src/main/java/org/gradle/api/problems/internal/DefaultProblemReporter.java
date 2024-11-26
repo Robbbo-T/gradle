@@ -32,14 +32,14 @@ public class DefaultProblemReporter implements InternalProblemReporter {
     private final ProblemStream problemStream;
     private final CurrentBuildOperationRef currentBuildOperationRef;
     private final ExceptionProblemRegistry exceptionProblemRegistry;
-    private final AdditionalDataBuilderFactory additionalDataBuilderFactory;
+    private final DefaultAdditionalDataBuilderFactory additionalDataBuilderFactory;
     private final ExceptionAnalyser exceptionAnalyser;
 
     public DefaultProblemReporter(
         ProblemSummarizer problemSummarizer,
         ProblemStream problemStream,
         CurrentBuildOperationRef currentBuildOperationRef,
-        AdditionalDataBuilderFactory additionalDataBuilderFactory,
+        DefaultAdditionalDataBuilderFactory additionalDataBuilderFactory,
         ExceptionProblemRegistry exceptionProblemRegistry,
         ExceptionAnalyser exceptionAnalyser
     ) {

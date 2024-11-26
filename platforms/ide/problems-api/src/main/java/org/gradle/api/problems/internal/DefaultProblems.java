@@ -32,7 +32,7 @@ public class DefaultProblems implements InternalProblems {
     private final CurrentBuildOperationRef currentBuildOperationRef;
     private final ProblemSummarizer problemSummarizer;
     private final InternalProblemReporter internalReporter;
-    private final AdditionalDataBuilderFactory additionalDataBuilderFactory = new AdditionalDataBuilderFactory();
+    private final DefaultAdditionalDataBuilderFactory additionalDataBuilderFactory = new DefaultAdditionalDataBuilderFactory();
     private final ExceptionProblemRegistry exceptionProblemRegistry;
     private final ExceptionAnalyser exceptionAnalyser;
 
@@ -61,7 +61,7 @@ public class DefaultProblems implements InternalProblems {
     }
 
     @Override
-    public AdditionalDataBuilderFactory getAdditionalDataBuilderFactory() {
+    public DefaultAdditionalDataBuilderFactory getAdditionalDataBuilderFactory() {
         return additionalDataBuilderFactory;
     }
 }
